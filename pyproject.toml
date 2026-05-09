@@ -1,0 +1,14 @@
+[project]
+name = "quills-sat"
+version = "0.1.0"
+description = "SAT encoding for QuillS"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+	"numpy>=2.0.1",
+	"scipy>=1.15.0",
+	"networkx>=3.3",
+  	"pytest>=8.2.0",
+  	"black>=24.4.2",
+
+]
