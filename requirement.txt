@@ -1,1 +1,2 @@
-python-sat
+python-sat==1.9.dev2
+
