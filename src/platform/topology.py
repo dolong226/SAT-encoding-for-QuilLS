@@ -8,7 +8,7 @@ from collections import defaultdict, deque
 class Topology:
     # Hardware coupling graph P = (nodes, edges)
 
-    n_quits: int
+    n_qubits: int
     edges: List[Tuple[int, int]]
     adjacency: Dict[int, Set[int]] = field(int, False)
 
