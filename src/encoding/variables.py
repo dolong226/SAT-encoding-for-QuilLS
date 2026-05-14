@@ -56,23 +56,23 @@ class VarPool:
     def e(self, q: int, q2: int, t: int) -> int:
         # q, q2 được ánh xạ đến 2 qubit vật lý có kết nối
         a, b = (q, q2) if q <= q2 else (q2, q)
-        return self._var(("et", a, b, t))
+        return self._var(("e", a, b, t))
 
     def c(self, g: int, t: int) -> int:
         # cổng g đang được thực hiện
-        return self._var(("ct", g, t))
+        return self._var(("c", g, t))
 
     def a(self, g: int, t: int) -> int:
         # cổng g đã được thực hiện
-        return self._var(("at", g, t))
+        return self._var(("a", g, t))
 
     def d(self, g: int, t: int) -> int:
         # cổng g đang đợi thực hiện (chưa thực hiện)
-        return self._var(("dt", g, t))
+        return self._var(("d", g, t))
 
     def u(self, p: int, t: int) -> int:
         # qubit vật lý p có thể được sử dụng (không bị chiếm dụng bởi SWAP)
-        return self._var(("ut", p, t))
+        return self._var(("u", p, t))
 
     def sw(self, p: int, p2: int, t: int) -> int:
         # p,p2 đang swap tại t, t-1, t-2
