@@ -10,7 +10,7 @@ class Topology:
 
     n_qubits: int
     edges: List[Tuple[int, int]]
-    adjacency: Dict[int, Set[int]] = field(int, False)
+    adjacency: Dict[int, Set[int]] = field(default_factory=dict)
 
     def __post_init__(self):
 

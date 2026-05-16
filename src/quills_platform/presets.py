@@ -1,5 +1,5 @@
 # Standard topologies: line, tenerife, guadalupe,...
-from topology import Topology
+from quills_platform.topology import Topology
 
 def line_topology(n: int) -> Topology:
     edges = [(i, i+1) for i in range (n-1)]

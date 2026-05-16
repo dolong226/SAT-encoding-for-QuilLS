@@ -45,6 +45,7 @@ def at_most_n(cnf: CNF, pool: VarPool, n: int, lits: list[int]) -> None:
             if j == n - 1 and i > 0:
                 cnf.append([-xi, -r(i - 1, j)])
 
+
 # Implication helpers
 
 def implies(cnf: CNF, a: int, b: int) -> None:
@@ -63,7 +64,7 @@ def and_implies(cnf: CNF, antecedents: list[int], consequent: int) -> None:
     cnf.append([-a for a in antecedents] + [consequent])
 
 
-def iff(cnf: CNF, a: int, b: int) -> None:
+def iff(cnf: CNF, a: int, b: int) -> Noine:
     # a tương đương b 3,9,18
     cnf.append([-a, b])
     cnf.append([-b, a])
@@ -71,7 +72,6 @@ def iff(cnf: CNF, a: int, b: int) -> None:
 
 def iff_or(cnf: CNF, pool: VarPool, a: int, bs: list[int]) -> None:
     # a ⟺ (b1 v b2 v ... v bn) 3,17
-
     cnf.append([-a] + bs)
     for b in bs:
         cnf.append([-b, a])

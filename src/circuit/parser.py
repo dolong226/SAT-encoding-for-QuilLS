@@ -10,7 +10,6 @@ class Circuit:
     n_qubits: int
     gates: list[Gate] = field(default_factory=list)
 
-
     def __str__(self):
         return f"Circuit(qubits={self.n_qubits}, gates={len(self.gates)})"
     
